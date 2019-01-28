@@ -1,0 +1,26 @@
+<h3><a class="btn btn-secondary" href="/marsupilami"><i class="fa fa-plus"></i> Create New</a> marsupilami List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Age</th>
+            <th>Famille</th>
+            <th>Race</th>
+            <th>Nourriture</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.age}}</td>
+            <td>{{this.famille}}</td>
+            <td>{{this.race}}</td>
+            <td>{{this.nourriture}}</td>
+            <td>
+                <a href="/marsupilami/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/marsupilami/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

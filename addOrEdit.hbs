@@ -1,0 +1,31 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/marsupilami" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{employee._id}}">
+    <div class="form-group">
+        <label>age</label>
+        <input type="text" class="form-control" name="Age" placeholder="Full Name" value="{{marsupilami.age}}">
+        <div class="text-danger">
+            {{marsupilami.ageError}}</div>
+    </div>
+    <div class="form-group">
+        <label>famille</label>
+        <input type="text" class="form-control" name="famille" placeholder="Email" value="{{marsupilami.famille}}">
+        <div class="text-danger">
+            {{marsupilami.famille}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>race</label>
+            <input type="text" class="form-control" name="race" placeholder="race" value="{{marsupilami.race}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>nourriture</label>
+            <input type="text" class="form-control" name="nourriture" placeholder="City" value="{{marsupilami.nourriture}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/marsupilami/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
